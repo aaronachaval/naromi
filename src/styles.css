@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+#fuente-body {
+    font-size: 10px;
+}
+
+#fuente {
+    font-family: 'Poppins', sans-serif;
+    color: #333333
+}
+
+#fuente:hover {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+#fuente1 {
+    font-family: 'Poppins', sans-serif;
+    color: #333333
+}
+
+#fuente2 {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    font-size: 0.9rem;
+    margin-top: 1%;
+    margin-left: -2%;
+}
+
+#fondo {
+    background-color: rgb(205, 243, 198);
+}
+
+#fondo1 {
+    background-color: rgb(173, 202, 168);
+}
+
+#chica {
+    width: 100px;
+    height: auto;
+}
+
+#chicacelu {
+    width: 50px;
+    height: auto;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#icono {
+    width: 20px;
+    height: 20px;
+    margin-top: 3%;
+}
+
+#iconocel {
+    margin-left: 120px;
+}
+
+#menu {
+    width: 20px;
+    height: 20px;
+}
+
+#margin-news {
+    margin-top: 7rem;
+}
