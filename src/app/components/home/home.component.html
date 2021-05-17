@@ -1,0 +1,200 @@
+<!-- Contiene todo el componente -->
+
+<ng-sidebar-container>
+
+    <ng-sidebar [opened]="opened" mode="slide" closeOnClickOutside="true" showBackdrop="true">
+
+        <!-- contenido del menu sidebar -->
+        <app-sidebar></app-sidebar>
+
+    </ng-sidebar>
+
+    <!--contenido de homepage -->
+    <div ng-sidebar-content>
+
+        <!-- Navbar - contiene boton sidebar, no logro mover componente -->
+        <div class="container-fluid ">
+            <div class="row align-items-center ">
+                <div class="col">
+
+                    <nav class="navbar navbar-expand-md  ">
+                        <div class="container-fluid fixed-top " id="fondo">
+
+                            <div class="row align-items-center justify-content-between  w-100">
+
+                                <!--  menu cel + imagen-->
+                                <div class="col-7   d-block d-sm-block d-md-none   ">
+                                    <div class="row ">
+
+                                        <!-- menu -->
+                                        <div class="col-4">
+
+
+
+                                            <img id="menu" src="https://i.ibb.co/RC3gXpR/lines.png" (click)="toggleSidebar()">
+
+
+
+
+                                        </div>
+
+                                        <!-- imagen -->
+                                        <div class="col-8 ">
+                                            <a href="home"><img id="chicacelu" src="https://d2r9epyceweg5n.cloudfront.net/stores/001/616/789/themes/common/logo-1287632938-1618356569-f8696d2602803f69ab09cb0e31a708a51618356569-320-0.png?0"> </a>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- iconos cel -->
+                                <div class="col-5 d-block d-sm-block d-md-none text-end">
+
+                                    <img id="icono" src="https://i.ibb.co/HxGFMDf/profile.png">
+                                    <img id="icono" src="https://i.ibb.co/3SGt5CS/like.png">
+                                    <img id="icono" src="https://i.ibb.co/ZSggkpL/bag.png">
+
+                                </div>
+
+
+                                <!-- imagen  pc -->
+                                <div class="col-md-2  d-none d-sm-none d-md-block ">
+
+                                    <a href="home"><img id="chica" src="https://d2r9epyceweg5n.cloudfront.net/stores/001/616/789/themes/common/logo-1287632938-1618356569-f8696d2602803f69ab09cb0e31a708a51618356569-320-0.png?0"> </a>
+
+                                </div>
+
+
+
+
+
+
+                                <!-- elemento menu pc -->
+                                <div class="col-md-10  d-none d-sm-none d-md-block ">
+
+                                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item dropdown ">
+                                                <a class="nav-link dropdown-toggle mt-2 ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <p id="fuente" class="h6 ">Almohadones</p>
+                                                </a>
+                                                <ul id="fondo1" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones">ver categoria</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones/pielsintetica">de piel síntetica</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones/bordados">bordados</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones/estampados">estampados</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones/lisos">lisos</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones/familias">familias(x4)</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown  ">
+                                                <a class="nav-link dropdown-toggle mt-2 ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <p id="fuente" class="h6">Puff</p>
+                                                </a>
+                                                <ul id="fondo1" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li><a id="fuente" class="dropdown-item" href="almohadones">ver categoria</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="puffs/pelolargo">de pelo largo</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="puffs/pelocorto">de pelo corto</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item mt-2 ms-4">
+                                                <a class="nav-link" href="mantas">
+                                                    <p id="fuente" class="h6">Mantas</p>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item dropdown  ">
+                                                <a class="nav-link dropdown-toggle mt-2 ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <p id="fuente" class="h6">Mesas de arrime</p>
+                                                </a>
+                                                <ul id="fondo1" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li><a id="fuente" class="dropdown-item" href="arrime">ver categoria</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="arrime/madera">de madera</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="arrime/hierro">de hierro</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="arrime/chapa">de chapa</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropdown ">
+                                                <a class="nav-link dropdown-toggle mt-2 ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <p id="fuente" class="h6">Patas</p>
+                                                </a>
+                                                <ul id="fondo1" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li><a id="fuente" class="dropdown-item" href="patas">ver categoria</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="patas/madera">de madera</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="patas/aluminio">de aluminio pulido</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="patas/chapa">de chapa</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropdown ">
+                                                <a class="nav-link dropdown-toggle mt-2 ms-4" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <p id="fuente" class="h6">Otros</p>
+                                                </a>
+                                                <ul id="fondo1" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <li><a id="fuente" class="dropdown-item" href="otros">ver categoria</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="otros/espejos">Espejos</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="otros/veladores">Veladores</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="otros/macetas">Macetas</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="otros/estantes">Estantes</a></li>
+                                                    <li><a id="fuente" class="dropdown-item" href="otros/percheros">Percheros</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item mt-2 ms-4">
+                                                <a class="nav-link" href="contacto">
+                                                    <p id="fuente" class="h6">Contacto</p>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- iconos y search pc-->
+                            <div class="col-2  d-none d-sm-none d-md-block">
+
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                    <img id="icono" type="submit" src="https://i.ibb.co/nMXd9gz/search.png">
+                                    <img id="icono" src="https://i.ibb.co/HxGFMDf/profile.png">
+                                    <img id="icono" src="https://i.ibb.co/3SGt5CS/like.png">
+                                    <img id="icono" src="https://i.ibb.co/ZSggkpL/bag.png">
+                                </form>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- componentes de home -->
+
+
+
+
+        <app-body></app-body>
+
+        <app-footer></app-footer>
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- cierre de ng-sidebar-content -->
+</ng-sidebar-container>

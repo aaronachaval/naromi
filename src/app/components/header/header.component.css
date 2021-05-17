@@ -1,0 +1,15 @@
+ng-sidebar-container {
+    height: 100vh;
+}
+
+::ng-deep .ng-sidebar {
+    background-color: blue;
+    width: 300px;
+    padding: 2em 3em;
+}
+
+.imagenchica {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
