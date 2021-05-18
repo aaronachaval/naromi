@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriesService, Category } from '../../services/categories.service';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,13 @@ export class HomeComponent  {
 
   toggleSidebar() {
     this.opened = !this.opened;
+  }
+
+
+  categories: Category[];
+
+  constructor(categoriesServices: CategoriesService) {
+    this.categories = categoriesServices.getCategories();
   }
 
 }
