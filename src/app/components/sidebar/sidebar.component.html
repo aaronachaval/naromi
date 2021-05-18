@@ -1,12 +1,4 @@
 <div class="sidebar">
-    <!-- sidebar - Llevar a ng-sidebar-content - Componente -->
-
-
-
-
-
-    <!-- acordeon - Llevar a ng-sidebar-content - Componente -->
-
     <div class="container">
         <div class="row">
             <div class="col">
@@ -18,44 +10,21 @@
         </div>
     </div>
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Almohadones
-            </button>
+    <div class="accordion accordion-flush" id="accordionSideBar">
+        <div class="accordion-item" *ngFor="let category of categories; let i = index">
+            <h2 class="accordion-header" [id]="'flush-heading-' + i">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + i" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + i">
+                    {{ category.name }}
+                </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"><a href="almohadones">Ver categoria</a></div>
-                <div class="accordion-body"><a href="almohadones/pielsintetica">De piel sintética</a></div>
-                <div class="accordion-body"><a href="almohadones/bordados">Bordados</a></div>
-                <div class="accordion-body"><a href="almohadones/estampados">Estampados</a></div>
-                <div class="accordion-body"><a href="almohadones/lisos">Lisos</a></div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
-            </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
-            </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the
-                    space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+            <div [id]="'flush-collapse-' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading-' + i" data-bs-parent="#accordionSideBar">
+                <div class="accordion-body">
+                    <a [href]="category.link">Ver categoria</a>
+                </div>
+                <div class="accordion-body" *ngFor="let subcategory of category.children">
+                    <a [href]="category.link + '/' + subcategory.link">{{ subcategory.name }}</a>
+                </div>
             </div>
         </div>
     </div>
-
-    <p>sadfsdafdsf</p>
-
 </div>
