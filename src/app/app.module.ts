@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
-//Rutas
-import{APP_ROUTING} from './app.routes';   
+// Rutas
+import { APP_ROUTING } from './app.routes';
 
+// Servicios
+import { CategoriesService } from './services/categories.service';
 
-//Componentes
+// Componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -57,6 +59,7 @@ import { PuffsPelocortoComponent } from './components/home/puffs/puffs-pelocorto
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +77,7 @@ import { PuffsPelocortoComponent } from './components/home/puffs/puffs-pelocorto
     MapaComponent,
     CarrouseliniComponent,
     AlmohadonesComponent,
-  
+
     MantasComponent,
 
     PatasComponent,
@@ -105,16 +108,15 @@ import { PuffsPelocortoComponent } from './components/home/puffs/puffs-pelocorto
 
     PuffsPelolargoComponent,
     PuffsPelocortoComponent,
-   
-    
+
+
   ],
   imports: [
     BrowserModule,
     SidebarModule.forRoot(),
     APP_ROUTING
-
   ],
-  providers: [],
+  providers: [CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
