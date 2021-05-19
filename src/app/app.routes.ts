@@ -1,6 +1,5 @@
 import {Routes, RouterModule} from '@angular/router';
 
-
 import { HomeComponent } from './components/home/home.component';
 import { ProductosComponent } from './components/home/productos/productos.component';
 import { AlmohadonesComponent } from './components/home/productos/almohadones/almohadones.component';
@@ -28,18 +27,6 @@ import { OtrosMacetasComponent } from './components/home/productos/otros/otros-m
 import { OtrosPercherosComponent } from './components/home/productos/otros/otros-percheros/otros-percheros.component';
 import { OtrosVeladoresComponent } from './components/home/productos/otros/otros-veladores/otros-veladores.component';
 import { ContactoComponent } from './components/home/contacto/contacto.component';
-
-
-
-
-
-
-
-
-
-
-
-
 
 const APP_ROUTES: Routes = [
     {path: 'home' , component : HomeComponent },
@@ -69,7 +56,7 @@ const APP_ROUTES: Routes = [
     {path: 'otros/percheros' , component : OtrosPercherosComponent },
     {path: 'otros/veladores' , component : OtrosVeladoresComponent },
     {path: 'contacto' , component : ContactoComponent },
-    {path: '**' ,  pathMatch:'full', redirectTo:'home'},  
+    {path: '**' ,  pathMatch: 'full', redirectTo: 'home'}
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
